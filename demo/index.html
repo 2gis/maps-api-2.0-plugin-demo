@@ -21,7 +21,7 @@
 
 <script type="text/javascript">
     L.DG.then(function() {
-        //загрузка плагина
+        //загрузка модуля
         return L.DG.plugin('file:///var/www/maps-api-2.0-plugin-demo/src/DGDemoPlugin.js');
     })
     .then(function() {
@@ -29,7 +29,7 @@
         var map = new L.Map('map', {
             'center': new L.LatLng(54.980206086231, 82.898068362003),
             'zoom': 15,
-            'dgGeoclicker': false
+            'geoclicker': false
         });
 
         map.demoPlugin.enable();

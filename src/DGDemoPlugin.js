@@ -29,14 +29,15 @@ L.DG.DemoPlugin = L.Handler.extend({
     },
 
     _showFirms: function(data) { // (Object)
-        var firms = data.result.data;
+        var marker,
+            firms = data.result.data;
         
         this._lastFirms.clearLayers();
         for (var i = 0; i < firms.length; i++) {
-            var marker = L.marker([firms[i].geo.lat, firms[i].geo.lon]);
+            marker = L.marker([firms[i].geo.lat, firms[i].geo.lon]);
             marker.bindPopup(firms[i].firm.name);
             marker.addTo(this._lastFirms);
-        };
+        }
         this._lastFirms.addTo(this._map);
     }
 });
