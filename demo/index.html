@@ -20,7 +20,7 @@
 <script type="text/javascript">
     L.DG.then(function() {
         //загрузка модуля
-        return L.DG.plugin('https://raw.github.com/2gis/maps-api-2.0-plugin-demo/master/dist/DGDemoPlugin.js?token=773648__eyJzY29wZSI6IlJhd0Jsb2I6Mmdpcy9tYXBzLWFwaS0yLjAtcGx1Z2luLWRlbW8vbWFzdGVyL2Rpc3QvREdEZW1vUGx1Z2luLmpzIiwiZXhwaXJlcyI6MTM4OTU0ODk4NH0%3D--112714a236bf5ee6418d7218806a184920ca4b10');
+        return L.DG.plugin('https://raw.github.com/2gis/maps-api-2.0-plugin-demo/master/dist/DGDemoPlugin.js');
     })
     .then(function() {
         //инициализация карты
@@ -29,8 +29,7 @@
             'zoom': 15,
             'geoclicker': false
         });
-
-        // включение демонстрационного модуля
+        // включение модуля
         map.demoPlugin.enable();
     });
 </script>
