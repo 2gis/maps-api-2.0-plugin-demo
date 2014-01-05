@@ -5,15 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full&mode=debug" data-id="dgLoader"></script>
+    <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full" data-id="dgLoader"></script>
     <style type="text/css">
 
       html,body { height: 100%; margin: 0px; padding: 0px; }
       #map { width: 100%; height: 100%; border: 1px solid #ccc; }
 
     </style>
-
-    <script src="file:///var/www/maps-api-2.0-plugin-demo/src/DGDemoPlugin.js"></script>
 </head>
 <body>
 
@@ -22,7 +20,7 @@
 <script type="text/javascript">
     L.DG.then(function() {
         //загрузка модуля
-        return L.DG.plugin('https://raw.github.com/2gis/maps-api-2.0-plugin-demo/master/dist/DGDemoPlugin.js?token=773648__eyJzY29wZSI6IlJhd0Jsb2I6Mmdpcy9tYXBzLWFwaS0yLjAtcGx1Z2luLWRlbW8vbWFzdGVyL2Rpc3QvREdEZW1vUGx1Z2luLmpzIiwiZXhwaXJlcyI6MTM4OTU0Nzk2MH0%3D--5a48cb806e2fc817d5d06205baab2afe7adb1967');
+        return L.DG.plugin('http://refresh-sf.com/yui/files/2ee5ed81829c9e362240e336a339755d9f514e34/.min.js');
     })
     .then(function() {
         //инициализация карты
@@ -32,6 +30,7 @@
             'geoclicker': false
         });
 
+        // включение демонстрационного модуля
         map.demoPlugin.enable();
     });
 </script>

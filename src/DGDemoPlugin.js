@@ -22,7 +22,7 @@ L.DG.DemoPlugin = L.Handler.extend({
                 radius: 500,
                 page_size: 50,
                 type: 'filial',
-                key: 1
+                key: 'ruhcbx0197'
             },
             success: L.bind(this._showFirms, this)
         })
