@@ -22,7 +22,7 @@ L.DG.DemoPlugin = L.Handler.extend({
                 key: 'ruhcbx0197'
             },
             success: L.bind(this._showFirms, this)
-        })
+        });
     },
 
     _showFirms: function(data) { // (Object)
