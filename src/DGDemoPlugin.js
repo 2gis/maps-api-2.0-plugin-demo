@@ -1,6 +1,3 @@
-if (typeof L.Handler !== 'undefined') {
-
-
 L.DG.DemoPlugin = L.Handler.extend({
 
     _lastFirms: L.layerGroup(),
@@ -33,16 +30,15 @@ L.DG.DemoPlugin = L.Handler.extend({
             firms = data.result.data;
         
         this._lastFirms.clearLayers();
-        for (var i = 0; i < firms.length; i++) {
-            marker = L.marker([firms[i].geo.lat, firms[i].geo.lon]);
-            marker.bindPopup(firms[i].firm.name);
+
+        firms.forEach(function(firmInfo) {
+            marker = L.marker([firmInfo.geo.lat, firmInfo.geo.lon]);
+            marker.bindPopup(firmInfo.firm.name);
             marker.addTo(this._lastFirms);
-        }
+        }, this);
+        
         this._lastFirms.addTo(this._map);
     }
 });
 
 L.Map.addInitHook('addHandler', 'demoPlugin', L.DG.DemoPlugin);
-
-
-}
