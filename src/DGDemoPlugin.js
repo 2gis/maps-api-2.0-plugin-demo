@@ -26,7 +26,7 @@ L.DG.DemoPlugin = L.Handler.extend({
         this._map.off('click', this._searchFirms, this);
     },
 
-    _searchFirms: function(e) { // (MouseEvent)
+    _searchFirms: function(e) { // (L.MouseEvent)
         var latlng = e.latlng.wrap();
 
         L.DG.ajax({
