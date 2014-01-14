@@ -13,6 +13,11 @@ L.DG.DemoPlugin = L.Handler.extend({
 
     _lastFirms: L.layerGroup(),
 
+    initialize: function (map, options) { // (L.Map, Object)
+        L.Handler.prototype.initialize.call(map);
+        L.Util.setOptions(this, options);
+    },
+
     addHooks: function() {
         this._map.on('click', this._searchFirms, this);
     },
